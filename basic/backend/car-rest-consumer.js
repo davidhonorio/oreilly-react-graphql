@@ -10,6 +10,7 @@ class CarAPI extends RESTDataSource {
   async getCars() {
     // HTTP GET http://localhost:3000/api/cars
     const response = await this.get('cars');
+    console.log(response);
     return Array.isArray(response) ? response.map(car => this.carReducer(car)) : [];
   }
 

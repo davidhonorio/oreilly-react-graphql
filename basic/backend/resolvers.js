@@ -2,6 +2,7 @@ const { paginateResults } = require('./utils');
 
 module.exports = {
   Query: {
+    // cars: (_, __, { dataSources }) => dataSources.carAPI.getCars(),
     cars: async (_, { pageSize = 10, after }, { dataSources }) => {
       const allCars = await dataSources.carAPI.getCars();
 
@@ -20,7 +21,6 @@ module.exports = {
     car: (_, { id }, { dataSources }) => dataSources.carAPI.getCar({ id })
   }
 };
-
 
 
 

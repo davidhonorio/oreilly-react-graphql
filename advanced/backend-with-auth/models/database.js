@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('graphql', 'root', 'marina', {
-  dialect: 'mysql',
+const sequelize = new Sequelize('graphql', 'postgres', 'admin', {
+  dialect: 'postgres',
   define: {
     timestamps: false
   },
-  logging: false
+  logging: false,
 });
 
 module.exports = {
